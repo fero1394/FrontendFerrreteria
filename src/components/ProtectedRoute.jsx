@@ -1,17 +1,16 @@
-import userEvent from '@testing-library/user-event'
 import React from 'react'
-import { useAuth } from '../contexts/authContext'
-import { Navigate } from 'react-router-dom';
+import {getAuth} from 'firebase/auth';
+import  {Navigate} from 'react-router-dom';
+import { useAuth } from '../contexts/authContext';
 
 export default function ProtectedRoute({children}) {
-    const {userEvent,loading} = useAuth();
+  const {user, loading} = useAuth();
 
-    if(loading) return <h1>Loading...</h1>
-    if(!user) return <Navigate to='/' />
+  if(loading) return <h1>Loading</h1>
 
-  return (
-    <>
-        {children}
-    </>
+  if(!user) return <Navigate to="/" /> 
+
+    return (
+    <>{children}</>
   )
 }
