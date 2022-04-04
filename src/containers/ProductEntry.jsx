@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 
 function ProductEntry() {
-  const url = 'https://jsonplaceholder.typicode.com/posts/1/comments'
+  const url = 'https://backend-ferreteria-sofka.herokuapp.com/entradamercancia/'
   
   const [todos, setTodos] = useState()
 
@@ -39,7 +39,7 @@ function ProductEntry() {
         <ul>
             {!todos ? 'cargando...' :
                 todos.map((todo,index) =>{
-                    return <li key={todo.id}>{todo.name} <br/> {todo.email}</li>
+                    return <li key={todo.idEntradaMercancia}>{todo.idEntradaMercancia} <br/> {todo.proveedor.idProveedor} <br/> {todo.proveedor.nombre} <br/> {todo.proveedor.cedula} <br/> {todo.proveedor.celular} <br/>{todo.fecha} <br/> {todo.nombreProducto} <br/> {todo.cantidadProducto} </li>
                 })
             }
         </ul>
