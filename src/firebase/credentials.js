@@ -7,12 +7,12 @@ import { initializeApp } from "firebase/app";
 
 // Configuración de Firebase de tu aplicación web
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "AIzaSyBZAXYOXTsKj1Z7KWCw0AMYJQfbvOZHlWQ",
+  authDomain: "reactfirebaseferreteria.firebaseapp.com",
+  projectId: "reactfirebaseferreteria",
+  storageBucket: "reactfirebaseferreteria.appspot.com",
+  messagingSenderId: "362859139713",
+  appId: "1:362859139713:web:951d822d12f5ef7c807380"
 };
 
 // Inicializamos a Firebase
